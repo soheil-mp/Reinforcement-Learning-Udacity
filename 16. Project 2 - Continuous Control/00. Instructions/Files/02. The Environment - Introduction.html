@@ -1,0 +1,246 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Environment - Introduction</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Continuous Control</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Unity ML-Agents.html">01. Unity ML-Agents</a>
+    </li>
+    <li class="">
+      <a href="02. The Environment - Introduction.html">02. The Environment - Introduction</a>
+    </li>
+    <li class="">
+      <a href="03. The Environment - Real World.html">03. The Environment - Real World</a>
+    </li>
+    <li class="">
+      <a href="04. The Environment - Explore.html">04. The Environment - Explore</a>
+    </li>
+    <li class="">
+      <a href="05. Project Instructions.html">05. Project Instructions</a>
+    </li>
+    <li class="">
+      <a href="06. Benchmark Implementation.html">06. Benchmark Implementation</a>
+    </li>
+    <li class="">
+      <a href="07. Not sure where to start.html">07. Not sure where to start?</a>
+    </li>
+    <li class="">
+      <a href="08. General Advice.html">08. General Advice</a>
+    </li>
+    <li class="">
+      <a href="09. Collaborate!.html">09. Collaborate!</a>
+    </li>
+    <li class="">
+      <a href="10. Workspace.html">10. Workspace</a>
+    </li>
+    <li class="">
+      <a href="11. (Optional) Challenge Crawl.html">11. (Optional) Challenge: Crawl</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Continuous Control.html">Project Description - Continuous Control</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Continuous Control.html">Project Rubric - Continuous Control</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">02. The Environment - Introduction</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="the-environment">The Environment</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>For this project, you will work with the <a href="https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher" target="_blank">Reacher</a> environment.  </p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/reacher.gif" alt="Unity ML-Agents Reacher Environment" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Unity ML-Agents Reacher Environment</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>In this environment, a double-jointed arm can move to target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of your agent is to maintain its position at the target location for as many time steps as possible.</p>
+<p>The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.</p>
+<h2 id="-distributed-training">## Distributed Training</h2>
+<p>For this project, we will provide you with two separate versions of the Unity environment:</p>
+<ul>
+<li>The first version contains a single agent.</li>
+<li>The second version contains 20 identical agents, each with its own copy of the environment.  </li>
+</ul>
+<p>The second version is useful for algorithms like <a href="https://arxiv.org/pdf/1707.06347.pdf" target="_blank">PPO</a>, <a href="https://arxiv.org/pdf/1602.01783.pdf" target="_blank">A3C</a>, and <a href="https://openreview.net/pdf?id=SyZipzbCb" target="_blank">D4PG</a> that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.  </p>
+<h2 id="-solving-the-environment">## Solving the Environment</h2>
+<p>Note that your project submission need only solve one of the two versions of the environment. </p>
+<h3 id="option-1-solve-the-first-version">Option 1: Solve the First Version</h3>
+<p>The task is episodic, and in order to solve the environment,  your agent must get an average score of +30 over 100 consecutive episodes.</p>
+<h3 id="option-2-solve-the-second-version">Option 2: Solve the Second Version</h3>
+<p>The barrier for solving the second version of the environment is slightly different, to take into account the presence of many agents.  In particular, your agents must get an average score of +30 (over 100 consecutive episodes, and over all agents).  Specifically,</p>
+<ul>
+<li>After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent.  This yields 20 (potentially different) scores.  We then take the average of these 20 scores. </li>
+<li>This yields an <strong>average score</strong> for each episode (where the average is over all 20 agents).</li>
+</ul>
+<p>As an example, consider the plot below, where we have plotted the <strong>average score</strong> (over all 20 agents) obtained with each episode.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/unknown.png" alt="Plot of average scores (over all agents) with each episode." class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>Plot of average scores (over all agents) with each episode.</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>The environment is considered solved, when the average (over 100 episodes) of those <strong>average scores</strong> is at least +30.  In the case of the plot above, the environment was solved at episode 63, since the average of the <strong>average scores</strong> from episodes 64 to 163 (inclusive) was greater than +30.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>

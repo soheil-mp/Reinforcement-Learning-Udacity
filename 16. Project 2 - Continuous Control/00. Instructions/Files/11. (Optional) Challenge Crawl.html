@@ -1,0 +1,222 @@
+<!-- udacimak v1.2.1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>(Optional) Challenge: Crawl</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Continuous Control</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Unity ML-Agents.html">01. Unity ML-Agents</a>
+    </li>
+    <li class="">
+      <a href="02. The Environment - Introduction.html">02. The Environment - Introduction</a>
+    </li>
+    <li class="">
+      <a href="03. The Environment - Real World.html">03. The Environment - Real World</a>
+    </li>
+    <li class="">
+      <a href="04. The Environment - Explore.html">04. The Environment - Explore</a>
+    </li>
+    <li class="">
+      <a href="05. Project Instructions.html">05. Project Instructions</a>
+    </li>
+    <li class="">
+      <a href="06. Benchmark Implementation.html">06. Benchmark Implementation</a>
+    </li>
+    <li class="">
+      <a href="07. Not sure where to start.html">07. Not sure where to start?</a>
+    </li>
+    <li class="">
+      <a href="08. General Advice.html">08. General Advice</a>
+    </li>
+    <li class="">
+      <a href="09. Collaborate!.html">09. Collaborate!</a>
+    </li>
+    <li class="">
+      <a href="10. Workspace.html">10. Workspace</a>
+    </li>
+    <li class="">
+      <a href="11. (Optional) Challenge Crawl.html">11. (Optional) Challenge: Crawl</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Continuous Control.html">Project Description - Continuous Control</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Continuous Control.html">Project Rubric - Continuous Control</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">11. (Optional) Challenge: Crawl</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="optional-challenge-crawl">(Optional) Challenge: Crawl</h1>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>After you have successfully completed the project, you might like to solve a more difficult continuous control environment, where the goal is to teach a creature with four legs to walk forward without falling.  </p>
+<p>You can read more about this environment in the ML-Agents GitHub <a href="https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#crawler" target="_blank">here</a>.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <figure class="figure">
+    <img src="img/crawler.png" alt="ML-Agents Crawler Environment" class="img img-fluid">
+    <figcaption class="figure-caption">
+      <p>ML-Agents Crawler Environment</p>
+    </figcaption>
+  </figure>
+</div>
+
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-download-the-unity-environment">## Download the Unity Environment</h2>
+<p>To solve this harder task, you'll need to download a new Unity environment.  You need only select the environment that matches your operating system:</p>
+<ul>
+<li>Linux: <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler_Linux.zip" target="_blank">click here</a></li>
+<li>Mac OSX: <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler.app.zip" target="_blank">click here</a></li>
+<li>Windows (32-bit): <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler_Windows_x86.zip" target="_blank">click here</a></li>
+<li>Windows (64-bit): <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler_Windows_x86_64.zip" target="_blank">click here</a></li>
+</ul>
+<p>Then, place the file in the <code>p2_continuous-control/</code> folder in the DRLND GitHub repository, and unzip (or decompress) the file.</p>
+<blockquote>
+  <p>Please do not submit a project with this new environment.  You are <strong>required</strong> to complete the project with the Reacher environment that was provided earlier in this lesson, in <strong>The Environment - Explore</strong>.</p>
+</blockquote>
+<p>(<em>For AWS</em>) If you'd like to train the agent on AWS (and have not <a href="https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md" target="_blank">enabled a virtual screen</a>), then please use <a href="https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Crawler/Crawler_Linux_NoVis.zip" target="_blank">this link</a> to obtain the "headless" version of the environment.  You will <strong>not</strong> be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (<em>To watch the agent, you should follow the instructions to <a href="https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md" target="_blank">enable a virtual screen</a>, and then download the environment for the <strong>Linux</strong> operating system above.</em>)</p>
+<h2 id="-explore-the-environment">## Explore the Environment</h2>
+<p>After you have followed the instructions above, open <code>Crawler.ipynb</code> (located in the <code>p2_continuous-control/</code> folder in the DRLND GitHub repository) and follow the instructions to learn how to use the Python API to control the agent.</p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.2.1</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+
+</html>
